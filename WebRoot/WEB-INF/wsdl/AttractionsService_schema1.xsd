@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://api.service.trave/" targetNamespace="http://api.service.trave/" version="1.0">
+
+  <xs:element name="getAttractionJson" type="tns:getAttractionJson"/>
+
+  <xs:element name="getAttractionJsonResponse" type="tns:getAttractionJsonResponse"/>
+
+  <xs:element name="getCityJson" type="tns:getCityJson"/>
+
+  <xs:element name="getCityJsonResponse" type="tns:getCityJsonResponse"/>
+
+  <xs:element name="getProvinceJson" type="tns:getProvinceJson"/>
+
+  <xs:element name="getProvinceJsonResponse" type="tns:getProvinceJsonResponse"/>
+
+  <xs:complexType name="getProvinceJson">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getProvinceJsonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCityJson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="provinceid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getCityJsonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAttractionJson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cityid" type="xs:string"/>
+      <xs:element minOccurs="0" name="proid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAttractionJsonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
