@@ -31,5 +31,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/showapi_sdk.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/soap-2.3.1.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
