@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://api.service.trave/" targetNamespace="http://api.service.trave/" version="1.0">
+
+  <xs:element name="getNowHumidityAndAirQuality" type="tns:getNowHumidityAndAirQuality"/>
+
+  <xs:element name="getNowHumidityAndAirQualityResponse" type="tns:getNowHumidityAndAirQualityResponse"/>
+
+  <xs:element name="main" type="tns:main"/>
+
+  <xs:element name="mainResponse" type="tns:mainResponse"/>
+
+  <xs:complexType name="main">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="args" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mainResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getNowHumidityAndAirQuality">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getNowHumidityAndAirQualityResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

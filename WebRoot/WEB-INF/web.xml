@@ -15,7 +15,25 @@
   	</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+  	<description>JAX-WS endpoint - WeatherService</description>
+  	<display-name>WeatherService</display-name>
+  	<servlet-name>WeatherService</servlet-name>
+  	<servlet-class>
+  		com.sun.xml.ws.transport.http.servlet.WSServlet
+  	</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>WeatherService</servlet-name>
+  	<url-pattern>/WeatherPort</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>AttractionsService</servlet-name>
   	<url-pattern>/AttractionsPort</url-pattern>
-  </servlet-mapping></web-app>
+  </servlet-mapping>
+  <listener>
+  	<listener-class>
+  		com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+  	</listener-class>
+  </listener></web-app>

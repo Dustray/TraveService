@@ -13,7 +13,7 @@ public class Weather {
 	static final String methodParameter = "theCityName";
 
 	public static void main(String[] args) {
-		System.out.println("ss" + getNowHumidityAndAirQuality("青岛"));
+		System.out.println("" + getNowHumidityAndAirQuality("青岛"));
 
 	}
 
@@ -25,10 +25,10 @@ public class Weather {
 		String ret = "";
 		try {
 			ret = ws.sendMessage(inMsg);
-			System.out.println(ret.toString()); // 没有对结果做处理
+			//System.out.println(ret.toString()); // 没有对结果做处理
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "湿度：61%;空气质量：中";
+			return "湿度：61%；空气质量：中";
 		}
 		String[] _1 = null;
 		try {
@@ -37,7 +37,7 @@ public class Weather {
 			System.out.println("湿度：" + _1[2]);
 			System.out.println("空气质量：" + _1[4]);
 		} catch (IndexOutOfBoundsException ex) {
-			return "湿度：61%;空气质量：中";
+			return "湿度：61%；空气质量：中";
 		}
 
 		return _1[2] + ";" + _1[4];

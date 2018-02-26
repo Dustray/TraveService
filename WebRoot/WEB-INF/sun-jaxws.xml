@@ -4,4 +4,8 @@
 	<endpoint name="AttractionsPort"
 		implementation="trave.service.api.AttractionsDelegate"
 		url-pattern="/AttractionsPort">
+	</endpoint>
+	<endpoint name="WeatherPort"
+		implementation="trave.service.api.WeatherDelegate"
+		url-pattern="/WeatherPort">
 	</endpoint></endpoints>
